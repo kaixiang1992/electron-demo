@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hello World!</title>
+    <title>readfile</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <h1>readfile demo</h1>
+    <pre id="source"></pre>
+    <script>
+        const readfile = require('electron').remote.require("./readfile.js");
+        console.log(readfile);
+    </script>
 </body>
 </html>

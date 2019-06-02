@@ -1,5 +1,4 @@
-const electron = require("electron");
-const { app, BrowserWindow } = electron;
+const { app, BrowserWindow } = require("electron");
 const path = require("path");
 
 /**
@@ -14,14 +13,9 @@ function createWindow(){
         height: 600
     });
     // TODO: 加载app的index.html文件
-    win.loadFile(path.resolve(__dirname, 'index.html'));
-    //TODO: 打开开发者工具
+    win.loadURL(path.resolve(__dirname, 'index.html'));  
+    // TODO: 打开开发者工具
     win.webContents.openDevTools();
-    //TODO: 触发关闭实践
-    win.on('close', (e) => {
-        console.log(`Service is closed`);
-        win = null; //TODO: 取消引用 window 对象，释放内存
-    });
 }
 
 /**
