@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/kaixiang1992/electron-demo#readme",
   "devDependencies": {
-    "electron": "^5.0.1"
+    "electron": "^18.3.7"
   }
 }
